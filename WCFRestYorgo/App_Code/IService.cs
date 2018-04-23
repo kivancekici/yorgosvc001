@@ -10,6 +10,9 @@ using System.Text;
 [ServiceContract]
 public interface IService
 {
+    [OperationContract]
+    [WebGet(UriTemplate = "test", BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json)]
+    string test();
 
     [OperationContract]
     [WebGet(UriTemplate = "getirTurlerIdAd", BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json)]
